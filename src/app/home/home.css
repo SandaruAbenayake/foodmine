@@ -1,0 +1,25 @@
+/* Home component styles */
+.hero { padding: 40px 0; }
+.hero h1 { font-size: 2rem; margin: 0 0 8px 0; }
+.hero p { margin: 0 0 12px 0; color:#444 }
+.hero-flex { display:flex; gap:20px; align-items:center; flex-wrap:wrap; }
+.hero-content { flex:1; min-width:260px; }
+.hero-actions { margin-top:16px; }
+.hero-actions a + a { margin-left:12px; }
+.hero-media { width:360px; min-width:220px; }
+.hero-image { border-radius:12px; width:100%; display:block; }
+
+.grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap:16px; margin-top:12px; }
+.card { position:relative; overflow:hidden; border-radius:10px; padding:12px; background:#fff; transition: transform 0.18s ease, box-shadow 0.18s ease; }
+.card:hover { transform: translateY(-4px); box-shadow: 0 6px 18px rgba(0,0,0,0.08); }
+.card-image { height:120px; width:100%; object-fit:cover; border-radius:8px; display:block; }
+.card-title { margin-top:8px; margin-bottom:4px; }
+.card-foot { display:flex; align-items:center; justify-content:space-between; }
+
+.featured { padding: 28px 0; }
+
+.blog-teaser { padding: 28px 0; }
+.teaser-row { display:flex; gap:12px; flex-wrap:wrap; margin-top:12px; }
+.teaser-card { padding:12px; background:#fff; border-radius:8px; min-width:220px; }
+
+.toast { position:fixed; bottom:20px; right:20px; background:#111; color:#fff; padding:10px 14px; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,0.2); z-index:2000 }

@@ -1,1 +1,46 @@
-<p>home works!</p>
+<section class="hero">
+	<div class="container">
+		<div class="hero-flex">
+			<div class="hero-content">
+				<h1>Delicious food, delivered fast</h1>
+				<p>Discover tasty meals from local chefs. Fast delivery and secure checkout.</p>
+				<div class="hero-actions">
+					<a class="btn" routerLink="/">Order Now</a>
+					<a routerLink="/about" class="link-plain">Learn More</a>
+				</div>
+			</div>
+			<div class="hero-media">
+				<img src="https://images.unsplash.com/photo-1756395067293-0f7e5604fba3?auto=format&fit=crop&w=774&q=80" alt="hero" class="hero-image" />
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="featured">
+	<div class="container">
+		<h2>Featured Foods</h2>
+		<div class="grid">
+			<div class="card" *ngFor="let p of products">
+				<img [src]="p.image" [alt]="p.title" loading="lazy" onerror="this.src='https://via.placeholder.com/360x240?text=No+Image'" class="card-image" />
+				<h3 class="card-title">{{p.title}}</h3>
+				<div class="card-foot">
+					<strong>€{{p.price}}</strong>
+					<button class="btn" (click)="addToCart(p)">Add to cart</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="blog-teaser">
+	<div class="container">
+		<h2>Latest from the Blog</h2>
+		<p>Short previews from our food blog.</p>
+		<div class="teaser-row">
+			<a routerLink="/blogs" class="card teaser-card">Read our blog posts</a>
+		</div>
+	</div>
+</section>
+
+<!-- brief toast confirmation -->
+<div *ngIf="addedMessage" class="toast">{{addedMessage}}</div>
