@@ -1,0 +1,16 @@
+/* Blogs styles */
+.blog-page h1 { margin-bottom:16px; }
+.post { background:#fff; padding:18px; border-radius:10px; box-shadow: 0 6px 18px rgba(0,0,0,0.04); }
+.post header h2 { margin:0 0 6px 0; }
+.post .meta { color:#666; font-size:0.9rem; margin-bottom:12px; }
+.post-media { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px; }
+.post-media img { width:100%; height:320px; object-fit:cover; border-radius:8px; display:block; }
+.post-body p { margin:0 0 12px 0; color:#333; }
+.post-body .read-more { font-weight:600; }
+
+@media (max-width: 768px) {
+	.post-media { grid-template-columns:1fr; }
+	.post-media img { height:220px; }
+}
+
+.blog-page { padding: 24px 0; }
