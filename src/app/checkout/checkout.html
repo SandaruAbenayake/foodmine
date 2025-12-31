@@ -1,0 +1,12 @@
+<section class="checkout-page">
+  <h1>Checkout</h1>
+  <div class="checkout-card">
+    <label>Name</label>
+    <input class="form-control" [(ngModel)]="name" />
+    <label class="label-block">Address</label>
+    <input class="form-control" [(ngModel)]="address" />
+    <div class="checkout-actions">
+      <button class="btn" (click)="placeOrder()">Complete Order</button>
+    </div>
+  </div>
+</section>

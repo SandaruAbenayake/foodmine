@@ -1,11 +1,16 @@
 <header>
     <div class="container">
-        <a href="#" routerLink="/" class="logo">Foof Mine</a>
+        <a routerLink="/" class="logo">Foof Mine</a>
         <nav>
             <ul>
-                <li><a href="#" routerLink="/">Home</a></li>
-                <li><a href="#" routerLink="/about">About</a></li>
-                <li><a href="#" routerLink="/cart-page">Cart</a></li>
+                                <li><a routerLink="/">Home</a></li>
+                                <li><a routerLink="/about">About</a></li>
+                                <li><a routerLink="/blogs">Blog</a></li>
+                                <li>
+                                    <ng-container *ngIf="cart.cart$ | async as items">
+                                        <a routerLink="/cart-page">Cart <span class="cart-badge" *ngIf="items.length">{{items.length}}</span></a>
+                                    </ng-container>
+                                </li>
             </ul>
         </nav>
     </div>

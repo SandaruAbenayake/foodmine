@@ -1,0 +1,7 @@
+/* Checkout page styles */
+input.form-control { margin-top:6px; }
+
+.checkout-page { padding: 20px 0; }
+.checkout-card { max-width:560px; background:#fff; padding:12px; border-radius:8px; }
+.label-block { margin-top:8px; display:block; }
+.checkout-actions { margin-top:12px; display:flex; justify-content:flex-end; gap:8px; }
