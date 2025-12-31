@@ -1,0 +1,6 @@
+/* Cart page styles */
+table { background:#fff;border-radius:8px;overflow:hidden }
+th, td { padding:8px; }
+
+.cart-page { padding: 20px 0; }
+.cart-summary { margin-top:12px; display:flex; justify-content:space-between; align-items:center; }

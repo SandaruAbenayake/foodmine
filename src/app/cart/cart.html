@@ -1,0 +1,26 @@
+<section class="cart-page">
+  <h1>Your Cart</h1>
+  <div *ngIf="(cart.cart$ | async) as items">
+    <div *ngIf="items.length; else empty">
+      <table>
+        <thead>
+          <tr><th>Item</th><th>Price</th><th></th></tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let it of items; let i = index">
+            <td>{{it.title}}</td>
+            <td>€{{it.price}}</td>
+            <td><button class="btn" (click)="cart.remove(i)">Remove</button></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="cart-summary">
+        <strong>Total: €{{cart.total()}}</strong>
+        <a class="btn" routerLink="/checkout">Checkout</a>
+      </div>
+    </div>
+    <ng-template #empty>
+      <p>Your cart is empty.</p>
+    </ng-template>
+  </div>
+</section>
