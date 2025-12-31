@@ -1,0 +1,29 @@
+/* About page styles */
+.about-page { padding: 24px 0; }
+
+.shop-details { margin-top: 18px; display: grid; grid-template-columns: 1fr 320px; gap: 18px; align-items: start; }
+.section-sub { margin-top: 12px; }
+.address-card { background:#fff; padding:12px; border-radius:8px; }
+.address-actions { margin-top:10px; }
+.gallery-title { margin-top:28px; }
+
+/* Slider (simple CSS-only continuous scroll) */
+.slider-wrap { overflow: hidden; border-radius:8px; }
+.slider-row { display:flex; gap:12px; align-items:center; animation: scroll-left 18s linear infinite; }
+.slider-row.rev { animation: scroll-right 18s linear infinite; }
+.slider-row img { width: 260px; height:160px; object-fit:cover; border-radius:8px; flex: 0 0 auto; }
+.slider-row:hover { animation-play-state: paused; }
+
+@keyframes scroll-left {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(-50%); }
+}
+@keyframes scroll-right {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(50%); }
+}
+
+/* Make about content card-like on white background */
+
+.shop-details > div:first-child { background:#fff; padding:16px; border-radius:8px; }
+
